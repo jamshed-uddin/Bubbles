@@ -1,8 +1,10 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const connectDB = require("./config/db");
 const app = express();
 dotenv.config();
+connectDB();
 const port = process.env.PORT || 3000;
 
 // middleware
